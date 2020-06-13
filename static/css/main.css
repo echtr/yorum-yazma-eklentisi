@@ -1,0 +1,43 @@
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0%;
+	padding: 0%;
+}
+.yorum{
+	width: 45%;
+	height: 12%;
+	font-size: 130%;
+	padding: 1%;
+}
+
+.isimler,.tarihler{
+	float: right;
+	margin-top: 9%;
+}
+.tarihler{
+	margin-right: 1%;
+}
+.yorum_hr{
+	float: left;
+	width: 47%;
+}
+.yorum_gonder{
+	margin-left: 2%;
+	margin-right: 20%;
+	font-size: 120%;
+}
+.gonder_{
+	font-size: 105%;
+	margin-left: 36.4%;
+	padding: 1%;
+}
+.echtr{
+	position: absolute;
+	float: right;
+}
+.textarea_yorum{
+	width: 45%;
+	height: 10%;
+	font-size: 120%;
+}

@@ -1,0 +1,31 @@
+<link rel = "stylesheet" type = "text/css" href = "{{ url_for('static', filename = 'css/main.css') }}">
+<script type = "text/javascript">
+	function yenileme_fonk(){
+		location.reload();
+	}
+	
+</script>
+
+<body>
+	<p class = "echtr">(c) 2020 - github.com/echtr</p>
+	<br>
+	<br>
+	<br>
+	<form action = "/" method = "post" class = "yorum_gonder">
+		<input type = "text" name = "isim" alt = "isim" required = "required" placeholder = "isim..."><br>
+		<textarea name = "yorum" required = "required" class = "textarea_yorum" placeholder = "yorum..."></textarea><br>
+		<input type = "submit" name = "gonder" onclick = "yenileme_fonk()" class = "gonder_">
+	</form>
+	<p style = "font-size: 105%;">Toplamda {{yorum_uzunluk}} yorum yapılmış. Sen de yorum yapmak istersen üstteki kutucuğu kullanabilirsin.</p>
+	<hr class = "yorum_hr">
+	{% for i in range(0,yorum_uzunluk)%}
+		<br>
+		<div class = "yorum">
+			<span class = "isimler">- {{isimler[i]}}</span>
+			<span class = "yorumlar">{{yorumlar[i]}}</span>
+			<span class = "tarihler">{{tarihler[i]}}</span>
+		</div>
+		<hr class = "yorum_hr">
+	{%endfor%}
+
+</body>
