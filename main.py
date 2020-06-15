@@ -35,7 +35,7 @@ def index():
 	if request.method == "POST":
 		tarih = datetime.datetime.now()
 		gun = tarih.strftime("%d")
-		ay = tarih.strftime("%w")
+		ay = tarih.strftime("%m")
 		if len(gun) == 1:
 			gun = str("0" + str(gun))
 		if len(ay) == 1:
